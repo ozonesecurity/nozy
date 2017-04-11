@@ -13,3 +13,5 @@ nOZy is dual licensed.
 * This software also uses OpenH264 for encoding. OpenH264 is licensed as per [LICENSE](https://github.com/cisco/openh264/blob/master/LICENSE)
 
 * Certain parts of oZone & nOZy have code common to ZoneMinder. Any such code was originally developed by Philip Coombes for the ZoneMinder project. Philip has granted all rights to use this code under non GPL terms for the oZone project (this project).
+
+* nOZy UI is developed on top of [Angular Material Dashboard](https://github.com/flatlogic/angular-material-dashboard) by Flatlogic, which is [MIT](https://github.com/flatlogic/angular-material-dashboard/blob/master/LICENSE) licensed
