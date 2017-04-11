@@ -14,4 +14,4 @@ nOZy is dual licensed.
 
 * Certain parts of oZone & nOZy have code common to ZoneMinder. Any such code was originally developed by Philip Coombes for the ZoneMinder project. Philip has granted all rights to use this code under non GPL terms for the oZone project (this project).
 
-* nOZy UI is developed on top of [Angular Material Dashboard](https://github.com/flatlogic/angular-material-dashboard) by Flatlogic, which is [MIT](https://github.com/flatlogic/angular-material-dashboard/blob/master/LICENSE) licensed
+* nOZy UI is developed on top of [CoreUI](https://github.com/mrholek/CoreUI-Free-Bootstrap-Admin-Template/) by [mrholek](https://github.com/mrholek/) which is [MIT](https://github.com/mrholek/CoreUI-Free-Bootstrap-Admin-Template/blob/master/LICENSE) licensed
