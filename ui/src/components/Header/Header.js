@@ -46,7 +46,16 @@ class Header extends Component {
             <a className="nav-link" href="#">Dashboard</a>
           </li>
           <li className="nav-item px-1">
+            <a className="nav-link" href="#">Live</a>
+          </li>
+          <li className="nav-item px-1">
+            <a className="nav-link" href="#">Events</a>
+          </li>
+          <li className="nav-item px-1">
             <a className="nav-link" href="#">Users</a>
+          </li>
+          <li className="nav-item px-1">
+            <a className="nav-link" href="#">Tools</a>
           </li>
           <li className="nav-item px-1">
             <a className="nav-link" href="#">Settings</a>
@@ -56,26 +65,17 @@ class Header extends Component {
           <li className="nav-item hidden-md-down">
             <a className="nav-link" href="#"><i className="icon-bell"></i><span className="badge badge-pill badge-danger">5</span></a>
           </li>
-          <li className="nav-item hidden-md-down">
-            <a className="nav-link" href="#"><i className="icon-list"></i></a>
-          </li>
-          <li className="nav-item hidden-md-down">
-            <a className="nav-link" href="#"><i className="icon-location-pin"></i></a>
-          </li>
           <li className="nav-item">
             <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
               <a onClick={this.toggle} className="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded={this.state.dropdownOpen}>
-                <img src={'img/avatars/6.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com"/>
                 <span className="hidden-md-down">admin</span>
               </a>
 
               <DropdownMenu className="dropdown-menu-right">
-                <DropdownItem header className="text-center"><strong>Account</strong></DropdownItem>
+                <DropdownItem header className="text-center"><strong>System</strong></DropdownItem>
 
-                <DropdownItem><i className="fa fa-bell-o"></i> Updates<span className="badge badge-info">42</span></DropdownItem>
-                <DropdownItem><i className="fa fa-envelope-o"></i> Messages<span className="badge badge-success">42</span></DropdownItem>
-                <DropdownItem><i className="fa fa-tasks"></i> Tasks<span className="badge badge-danger">42</span></DropdownItem>
-                <DropdownItem><i className="fa fa-comments"></i> Comments<span className="badge badge-warning">42</span></DropdownItem>
+                <DropdownItem><i className="fa fa-bell-o"></i> Notifications<span className="badge badge-info">12</span></DropdownItem>
+                <DropdownItem><i className="fa fa-film"></i> Events<span className="badge badge-danger">140</span></DropdownItem>
 
                 <DropdownItem header className="text-center"><strong>Settings</strong></DropdownItem>
 
