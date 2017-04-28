@@ -28,6 +28,26 @@ class Sidebar extends Component {
             <li className="nav-title">
               UI Elements
             </li>
+            <li className={this.activeRoute("/live")}>
+              <a className="nav-link nav-dropdown-toggle" href="#" onClick={this.handleClick.bind(this)}><i className="icon-camrecorder"></i> Live Video</a>
+              <ul className="nav-dropdown-items">
+                <li className="nav-item">
+                  <Link to={'/live/'} className="nav-link" activeClassName="active"><i className="icon-camrecorder"></i> Multi View</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={'/live/mp4'} className="nav-link" activeClassName="active"><i className="icon-camrecorder"></i> Single View (MP4)</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={'/live/hls'} className="nav-link" activeClassName="active"><i className="icon-camrecorder"></i> Single View (HLS)</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={'/live/ogv'} className="nav-link" activeClassName="active"><i className="icon-camrecorder"></i> Single View (OGV)</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={'/live/webm'} className="nav-link" activeClassName="active"><i className="icon-camrecorder"></i> Single View (WEBM)</Link>
+                </li>
+              </ul>
+            </li>
             <li className={this.activeRoute("/components")}>
               <a className="nav-link nav-dropdown-toggle" href="#" onClick={this.handleClick.bind(this)}><i className="icon-puzzle"></i> Components</a>
               <ul className="nav-dropdown-items">

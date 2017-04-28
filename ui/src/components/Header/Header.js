@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import { Dropdown, DropdownMenu, DropdownItem } from 'reactstrap';
 
 class Header extends Component {
@@ -46,7 +47,7 @@ class Header extends Component {
             <a className="nav-link" href="#">Dashboard</a>
           </li>
           <li className="nav-item px-1">
-            <a className="nav-link" href="#">Live</a>
+            <Link className="nav-link" to="/live/">Live</Link>
           </li>
           <li className="nav-item px-1">
             <a className="nav-link" href="#">Events</a>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 // Containers
 import Full from './containers/Full/'
@@ -22,12 +22,16 @@ import Register from './views/Pages/Register/'
 import Page404 from './views/Pages/Page404/'
 import Page500 from './views/Pages/Page500/'
 import Widgets from './views/Widgets/'
+import { LiveMulti, LiveSingle } from './views/Live/'
 
 export default (
-  <Router history={hashHistory}>
+  <Router history={browserHistory}>
     <Route path="/" name="Home" component={Full}>
       <IndexRoute component={Dashboard}/>
       <Route path="dashboard" name="Dashboard" component={Dashboard}/>
+      <Route path="live/" name="Live View" component={LiveMulti}>
+        <Route path=":feedId" name="Live View" component={LiveSingle}/>
+      </Route>
       <Route path="components/" name="Components">
         <IndexRoute component={Buttons}/>
         <Route path="buttons" name="Buttons" component={Buttons}/>
