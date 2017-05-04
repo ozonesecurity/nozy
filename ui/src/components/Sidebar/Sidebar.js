@@ -32,6 +32,9 @@ class Sidebar extends Component {
               <a className="nav-link nav-dropdown-toggle" href="#" onClick={this.handleClick.bind(this)}><i className="icon-camrecorder"></i> Live Video</a>
               <ul className="nav-dropdown-items">
                 <li className="nav-item">
+                  <Link to={'/packed/'} className="nav-link" activeClassName="active"><i className="icon-camrecorder"></i> Packed View</Link>
+                </li>
+                <li className="nav-item">
                   <Link to={'/live/'} className="nav-link" activeClassName="active"><i className="icon-camrecorder"></i> Multi View</Link>
                 </li>
                 <li className="nav-item">

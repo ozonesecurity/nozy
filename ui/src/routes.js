@@ -22,7 +22,7 @@ import Register from './views/Pages/Register/'
 import Page404 from './views/Pages/Page404/'
 import Page500 from './views/Pages/Page500/'
 import Widgets from './views/Widgets/'
-import { LiveMulti, LiveSingle } from './views/Live/'
+import { LivePacked, LiveMulti, LiveSingle } from './views/Live/'
 
 export default (
   <Router history={browserHistory}>
@@ -32,6 +32,7 @@ export default (
       <Route path="live/" name="Live View" component={LiveMulti}>
         <Route path=":feedId" name="Live View" component={LiveSingle}/>
       </Route>
+      <Route path="packed/" name="Packed View" component={LivePacked}/>
       <Route path="components/" name="Components">
         <IndexRoute component={Buttons}/>
         <Route path="buttons" name="Buttons" component={Buttons}/>

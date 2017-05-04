@@ -1,6 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import { Player } from 'video-react';
 import Hls from 'hls.js';
+import Packery from 'react-packery-component';
+import ReactGridLayout from 'react-grid-layout';
+import {Responsive, WidthProvider} from 'react-grid-layout';
+const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
 const propTypes = {
   src: PropTypes.string.isRequired,
@@ -37,12 +41,11 @@ export default class HLSSource extends Component {
       />
     );
   }
-
 }
 
 HLSSource.propTypes = propTypes;
 
-const VideoMP4 = () => {
+const VideoMP4 = ( props ) => {
     return(
       <Player
         playsInline
@@ -53,7 +56,7 @@ const VideoMP4 = () => {
     );
 }
 
-const VideoHLS = () => {
+const VideoHLS = ( props ) => {
     return(
       <Player>
         <HLSSource
@@ -64,7 +67,7 @@ const VideoHLS = () => {
     );
 }
 
-const VideoOGV = () => {
+const VideoOGV = ( props ) => {
     return(
       <Player
         playsInline
@@ -74,7 +77,7 @@ const VideoOGV = () => {
     );
 }
 
-const VideoWEBM = () => {
+const VideoWEBM = ( props ) => {
     return(
       <Player
         playsInline
@@ -82,6 +85,48 @@ const VideoWEBM = () => {
         src="http://media.w3.org/2010/05/video/movie_300.webm"
       />
     );
+}
+
+export class LivePacked extends Component {
+	updateLayout( layout ) {
+    console.log( layout );
+  }
+  render() {
+    console.log( "Grid", this );
+    const layout = [
+      {i:'mp4', x: 0, y: 0, w: 1, h:3 },
+      {i:'hls', x: 1, y: 0, w: 1, h:3 },
+      {i:'ogv', x: 0, y: 1, w: 1, h:3 },
+      {i:'webm', x: 1, y: 1, w: 1, h:4 },
+    ];
+    const layouts = {
+      lg: layout,
+      md: layout,
+    }
+    return (
+      <ResponsiveReactGridLayout
+        className={'layout'}
+        layouts={layouts}
+        breakpoints={{lg:1200,md:996,sm:640,xs:480}}
+        cols={{lg: 3, md: 3, sm: 2, xs: 2, xxs: 2}}
+        rowHeight={70}
+        onLayoutChange={this.updateLayout.bind(this)}
+      >
+        <div key={'mp4'}>
+          <VideoMP4/>
+        </div>
+        <div key={'hls'}>
+          <VideoHLS/>
+        </div>
+        <div key={'ogv'}>
+          <VideoOGV/>
+        </div>
+        <div key={'webm'}>
+          <VideoWEBM/>
+        </div>
+      </ResponsiveReactGridLayout>
+    )
+  }
 }
 
 export class LiveMulti extends Component {
@@ -119,7 +164,7 @@ export class LiveSingle extends Component {
       <div className="animated fadeIn">
       {this.feedId === "mp4" &&
         <VideoMP4/>
-	  }
+    }
       {this.feedId === "hls" &&
         <VideoHLS/>
       }
