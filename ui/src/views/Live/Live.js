@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Player } from 'video-react';
 import Hls from 'hls.js';
-import Packery from 'react-packery-component';
 import ReactGridLayout from 'react-grid-layout';
 import {Responsive, WidthProvider} from 'react-grid-layout';
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
